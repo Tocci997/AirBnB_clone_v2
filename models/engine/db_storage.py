@@ -44,8 +44,8 @@ class DBStorage:
                 dikt[k] = element
         else:
             listall = [State, City, User, Place, Review, Amenity]
-            for cl in listall:
-                query = self.__session.query(cl)
+            for cls in listall:
+                query = self.__session.query(cls)
                 for element in query:
                     k = "{}.{}".format(type(element).__name__, element.id)
                     dikt[k] = element

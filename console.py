@@ -127,6 +127,7 @@ class HBNBCommand(cmd.Cmd):
             print("** class doesn't exist **")
             return
         lists_all = args.split(" ")
+
         new_instance = eval(class_name)()
         for t in range(1, len(lists_all)):
             k, v = tuple(lists_all[t].split("="))
